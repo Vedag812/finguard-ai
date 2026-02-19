@@ -8,6 +8,24 @@
 
 ---
 
+## 🖼️ Visual Showcase
+
+### 📊 Comprehensive Risk Dashboard
+Discover a powerful, high-fidelity interface designed for deep financial analysis and real-time monitoring.
+
+| Portfolio Overview | Risk Analysis & Explainability |
+|:---:|:---:|
+| ![Portfolio Overview](docs/screenshots/Screenshot%202026-02-19%20203903.png) | ![Risk Analysis](docs/screenshots/Screenshot%202026-02-19%20203934.png) |
+
+### ↗ Targeted Interventions & Behavioral Signals
+Proactively manage credit risk with AI-suggested actions and granular behavioral tracking.
+
+| Intervention Recommendations | Behavioral Heatmaps |
+|:---:|:---:|
+| ![Interventions](docs/screenshots/Screenshot%202026-02-19%20203944.png) | ![Signals](docs/screenshots/Screenshot%202026-02-19%20204004.png) |
+
+---
+
 ## 🏛️ System Architecture
 
 FinGuard AI utilizes a resilient architecture designed for 100% availability and data integrity, even in unstable network environments.
@@ -27,7 +45,7 @@ The dashboard processes behavioral signals to calculate granular risk scores:
 
 ## ✨ Enterprise Features
 
-### � Risk Monitoring & Alerts
+### 🔍 Risk Monitoring & Alerts
 A high-performance datagrid featuring 100+ active records with real-time filtering. Risk managers can deep-dive into individual customer signals, viewing historical trends and behavioral anomalies.
 
 ### ↗ Automated Intervention Lifecycle
@@ -47,7 +65,6 @@ AI-driven recommendations for proactive risk mitigation:
 - **Frontend**: Next.js 15+ (App Router), TypeScript, Tailwind CSS 4
 - **Backend**: Node.js API Routes with resilient Firebase Admin integration
 - **Visuals**: Framer Motion, Recharts, and Custom SVG Data Gauges
-- **Security**: Robust environment variable scrubbing and server-side secret management
 
 ## 📂 Project Structure
 
