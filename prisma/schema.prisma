@@ -1,0 +1,49 @@
+// FinGuard AI – Prisma Schema (Supabase PostgreSQL)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model FlaggedCustomer {
+  id         String   @id @default(cuid())
+  customerId String
+  name       String
+  reason     String
+  priority   String   // "Critical" | "High" | "Medium" | "Low"
+  flaggedAt  DateTime @default(now())
+  flaggedBy  String   @default("FinGuard System")
+
+  @@map("flagged_customers")
+}
+
+model InterventionLog {
+  id             String   @id @default(cuid())
+  customerId     String
+  customerName   String
+  intervention   String
+  approvedBy     String   @default("Relationship Manager")
+  approvedAt     DateTime @default(now())
+  status         String   @default("APPROVED") // "APPROVED" | "RM_QUEUED" | "PENDING"
+
+  @@map("intervention_logs")
+}
+
+model AlertSettings {
+  id               String  @id @default("singleton")
+  criticalThreshold Int     @default(80)
+  highThreshold     Int     @default(60)
+  moderateThreshold Int     @default(40)
+  emailEnabled      Boolean @default(true)
+  smsEnabled        Boolean @default(false)
+  slackEnabled      Boolean @default(false)
+  autoEscalate      Boolean @default(true)
+  updatedAt         DateTime @updatedAt
+
+  @@map("alert_settings")
+}
